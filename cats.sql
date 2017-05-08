@@ -1,18 +1,17 @@
-CREATE TABLE cats (
+CREATE TABLE songs (
   id INTEGER PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
+  title VARCHAR(255) NOT NULL,
   owner_id INTEGER,
 
-  FOREIGN KEY(owner_id) REFERENCES human(id)
+  FOREIGN KEY(album_id) REFERENCES album(id)
 );
 
-CREATE TABLE humans (
+CREATE TABLE albums (
   id INTEGER PRIMARY KEY,
-  fname VARCHAR(255) NOT NULL,
-  lname VARCHAR(255) NOT NULL,
-  house_id INTEGER,
+  title VARCHAR(255) NOT NULL,
+  artist_id INTEGER,
 
-  FOREIGN KEY(house_id) REFERENCES human(id)
+  FOREIGN KEY(artist_id) REFERENCES artist(id)
 );
 
 CREATE TABLE houses (
