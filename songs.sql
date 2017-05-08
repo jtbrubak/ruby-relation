@@ -1,7 +1,7 @@
 CREATE TABLE songs (
   id INTEGER PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
-  owner_id INTEGER,
+  album_id INTEGER,
 
   FOREIGN KEY(album_id) REFERENCES album(id)
 );
@@ -30,7 +30,7 @@ VALUES
   (1, "Magical Mystery Tour", 1),
   (2, "Abbey Road", 1),
   (3, "In a Silent Way", 2),
-  (4, "Kind of Blue", 2);
+  (4, "Kind of Blue", 2),
   (5, "Purple Rain", 3),
   (6, "Controversy", 3);
 
@@ -41,5 +41,5 @@ VALUES
   (2, "Come Together", 2),
   (3, "In a Silent Way", 3),
   (4, "So What", 4),
-  (5, "When Doves Cry", 5);
-  (6, "Controversy", 6)
+  (5, "When Doves Cry", 5),
+  (6, "Controversy", 6);
